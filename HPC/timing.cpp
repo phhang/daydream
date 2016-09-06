@@ -26,14 +26,26 @@ int main()
 	omp_set_num_threads(n);
 #pragma omp parallel
 	{
-		int thread_num = omp_get_thread_num();
-		printf("Thread %d\n", thread_num);
-		qsort(a, num, sizeof(int), compare);
+		//int thread_num = omp_get_thread_num();
 		
+#pragma omp single
+		{
+#pragma omp task
+			{
+				printf("A");
+			}
+#pragma omp task
+			{
+				printf("B");
+			}
+#pragma omp taskwait
+			printf("C");
+		}
+
 	}
 	end = GetTickCount();
 
-	printf("%d", end - start);
+	//printf("%d", end - start);
 
 	return 0;
 }

@@ -1,3 +1,4 @@
 ﻿  timing.cpp
-  HPC.vcxproj -> C:\Users\宪航\Source\Repos\daydream\HPC\Debug\HPC.exe
-  HPC.vcxproj -> C:\Users\宪航\Source\Repos\daydream\HPC\Debug\HPC.pdb (Partial PDB)
+c:\users\宪航\source\repos\daydream\hpc\timing.cpp(33): error C3001: “task”: 应为 OpenMP 指令名称
+c:\users\宪航\source\repos\daydream\hpc\timing.cpp(37): error C3001: “task”: 应为 OpenMP 指令名称
+c:\users\宪航\source\repos\daydream\hpc\timing.cpp(41): error C3001: “taskwait”: 应为 OpenMP 指令名称
